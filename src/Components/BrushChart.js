@@ -33,7 +33,7 @@ function BrushChart({ data }) {
 
     // scales + line generator
     const xScale = scaleLinear()
-      .domain([0, data.length - 1])
+      .domain([2012, 2012+data.length-1])
       .range([0, width]);
 
     const yScale = scaleLinear()
@@ -41,7 +41,7 @@ function BrushChart({ data }) {
       .range([height, 0]);
 
     const lineGenerator = line()
-      .x((d, index) => xScale(index))
+      .x((d, index) => xScale(2012+index))
       .y((d) => yScale(d))
       .curve(curveCardinal);
 
@@ -63,7 +63,7 @@ function BrushChart({ data }) {
       .attr("stroke", "red")
       .attr("r", (value, index) => 4
       )
-      .attr("cx", (value, index) => xScale(index))
+      .attr("cx", (value, index) => xScale(2012+index))
       .attr("cy", yScale);
 
     // axes

@@ -10,6 +10,13 @@
   text-align: center;
 }
 
+.navbar {
+  display: inline-block;
+}
+
+.navbar {
+  display: inline-block;
+}
 .container {
   background-color: rgb(255, 236, 226);
   width: 70%;
